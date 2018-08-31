@@ -186,7 +186,7 @@ Feature: ODC-45 Login Validation
     And I pause for 1000ms
     Then I expect to be on the "ODCDashboard" page
     And I expect that element "QA_ViralGains" does exist
-    And I pause for 10000ms
+    And I pause for 4000ms
     And I click on "QA_ViralGains"
     Then I expect to be on the "Campaigns" page
 
