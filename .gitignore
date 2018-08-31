@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+allure-report
+reports
+errorShots
+screenshots
+.idea
+.DS_Store
+*.log

@@ -1,0 +1,53 @@
+{
+  "rules": {
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "quotes": [2, "single"],
+    "linebreak-style": [2, "unix"],
+    "semi": [2, "always"],
+    "no-underscore-dangle": 0,
+    "key-spacing": 0,
+    "no-unused-vars": 0,
+    "no-undefined": 0,
+    "no-new": 0,
+    "camelcase": 0,
+    "yoda": 0,
+    "no-undef": "error",
+    "default-case": "error",
+    "curly": "error",
+    "brace-style": "error",
+    "no-use-before-define": [2, "nofunc"],
+    "no-cond-assign": "error",
+    "no-console" : "warn",
+    "spaced-comment": [2, "always"],
+    "space-before-function-paren": [2, { "anonymous": "always", "named": "never" }],
+    "keyword-spacing": [2, {"after": true}],
+    "space-before-blocks": [2, "always"],
+    "semi-spacing": [2, {"before": false, "after": true}],
+    "no-var": 2,
+    "object-shorthand": [2, "always"],
+    "prefer-const": 2,
+    "prefer-template": "error",
+    "prefer-destructuring": ["error", {"object": true, "array": true}],
+    "eqeqeq": ["error", "smart"],
+    "no-duplicate-imports": "error",
+  },
+  "globals": {
+    "$": true,
+    "$$": true,
+    "allure" : true,
+    "assert": true,
+    "browser": true,
+    "browserA": true,
+    "browserB": true,
+    "document": true,
+    "expect": true,
+    "MouseEvent": true
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}

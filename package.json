@@ -1,0 +1,60 @@
+{
+  "name": "cucumber-salad",
+  "version": "1.0.0",
+  "description": "An automated cucumber based project utilizing webdriver io.",
+  "main": "index.js",
+  "scripts": {
+    "gherkin-lint": "./node_modules/.bin/gherkin-lint",
+    "lint": "node_modules/.bin/eslint ./",
+    "lintFix": "node_modules/.bin/eslint ./ --fix",
+    "example": "npm start -- --features=ODC-45_LoginValidation.feature --tags=@Accept",
+    "start": "mkdir -p reports/allure-results && find reports/allure-results -type f -maxdepth 1 -delete && ./node_modules/.bin/wdio configuration/wdio.conf.js",
+    "jenkinsConfig": "mkdir -p reports/allure-results && find reports/allure-results -type f -maxdepth 1 -delete && ./node_modules/.bin/wdio configuration/wdio.jenkins.conf.js",
+    "multiremoteConfig": "mkdir -p reports/allure-results && find reports/allure-results -type f -maxdepth 1 -delete && ./node_modules/.bin/wdio configuration/wdio.multiremote.conf.js",
+    "test": "./node_modules/.bin/wdio configuration/wdio.conf.js",
+    "allure": "allure generate reports/allure-results --clean && allure open"
+  },
+  "keywords": [
+    "selenium",
+    "automation",
+    "qa",
+    "vg",
+    "cucumber"
+  ],
+  "author": "Yair Leviel",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "~6.24.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.0.2",
+    "chai-date-proximity": "0.0.3",
+    "chai-sorted": "^0.2.0",
+    "eslint": "^5.0.1",
+    "eslint-plugin-import": "^2.13.0",
+    "gulp": "^3.9.1",
+    "lodash": "^4.17.10",
+    "superagent": "^3.8.3",
+    "utf8": "^3.0.0",
+    "wdio": "^2.0.2",
+    "wdio-allure-vg-reporter": "^0.1.8",
+    "wdio-cucumber-framework": "^0.3.1",
+    "wdio-junit-reporter": "^0.4.4",
+    "wdio-mocha-framework": "^0.6.2",
+    "wdio-selenium-standalone-service": "0.0.10",
+    "wdio-visual-regression-service": "^0.9.0",
+    "yargs": "^12.0.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "clipboardy": "^1.2.3",
+    "gherkin-lint": "^2.11.1",
+    "imap-simple": "^3.2.0",
+    "is-fullwidth-code-point": "^2.0.0",
+    "moment": "^2.22.1",
+    "npm": "^6.1.0",
+    "quoted-printable": "^1.0.1",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "system-sleep": "^1.3.6"
+  }
+}
