@@ -127,6 +127,12 @@ const clickElementLookupTable = {
   'Job Title': 'Input[name=\'jobTitle\']',
   'Campaign Name Link': '.tab__tabContentActive___3V4vx .datagrid__rtTrGroup___2oDPX:nth-child(1) .datagrid__rtTd___-YAv-:nth-child(3) .linkedSpan__spanLink___3khFu',
 
+  'Campaign Name First Link' : '.tab__tabContentActive___1HSqy .datagrid__rtTrGroup___2oDPX:nth-child(1) .datagrid__rtTd___-YAv-:nth-child(3) .linkedSpan__spanLink___3khFu',
+  'Right Arrow of Campaign Paging': '.tab__tabContentActive___1HSqy .pageControls__controls___CLwh9 .pageControls__nextPageButton___3mrje',
+  'ElemLoadingScreen': '.tab__tabContentActive___1HSqy .-loading -active',
+  'ElemLoadedScreen': '.tab__tabContentActive___1HSqy .-loading',
+
+
   // Drop-downs in Account Management - Create or Edit : Account tab, group tab & users tab
   'Parent dropdown': '.Select.form__selectOverride___3VR9o.Select--single.is-searchable',
   'Parent Menu': '.Select-menu-outer .Select-option[id$="--option-0"]',
@@ -161,6 +167,7 @@ const clickElementLookupTable = {
   // Grid Elements -  Campaign Page ; Account Management Page - Accounts Tab, Groups Tab and Users Tab
 
   'Select Checkbox': '.tab__tabContentActive___1HSqy .datagrid__rtTrGroup___2oDPX:nth-child(1) Input[type=\'checkbox\']',
+  'Creative Select Checkbox' : '.style__subSection___1PxqS .style__table___1lFEl .style__tableBody___MsyMo >div input[type="checkbox"]',
   'Select Checkbox in modal window': '.gridSelector__container___1zpWG .datagrid__rtTable___1jUh7  input[type=\'checkbox\']',
   'Select Checkbox2 in modal window': '.gridSelector__container___1zpWG .datagrid__rtTrGroup___2oDPX:nth-child(2) Input[type=\'checkbox\']',
   'Grid Edit Icon': '.tab__tabContentActive___3V4vx .datagrid__rtTrGroup___2oDPX:nth-child(1) .actionCellRenderer__actionContainer___2Vq3p .fa-pencil',
@@ -187,7 +194,7 @@ const clickElementLookupTable = {
   'Groups Tab': '.tab__tabGroup___VrHGq > a:nth-child(2)',
   'Users Tab': '.tab__tabGroup___VrHGq > a:nth-child(3)',
   'Creative Tab': '.tab__tabGroup___VrHGq > a:nth-child(2)',
-
+  'Creative tab Row' : '.style__subSection___1PxqS .style__table___1lFEl .style__tableBody___MsyMo',
   'Creative Groups Tab': '.tab__tabGroup___VrHGq > a:nth-child(3)',
 
 
@@ -281,6 +288,7 @@ const isExistingLookupTable = {
   'Existing Test Account': '.datagrid__selectedRow___3YsXr input[type=\'checkbox\']',
   'Modal Title': '.detailDialog__title___3Xzyv',
   'Existing Creative': '.tab__tabContentActive___3V4vx .datagrid__rtTrGroup___2oDPX:nth-child(1)',
+  'Existing Creative Name' : '.style__subSection___1PxqS .style__table___1lFEl .style__tableBody___MsyMo .style__bodyItem___ptuwS:nth-child(2)',
   'userlist1': 'div[class=\'pageControls__container___2ayEm\']',
 
   'Searched Account': 'Input.style__searchBox___1oZ68',
@@ -410,6 +418,9 @@ const setElementLookupTable = {
   // Campaign Page , Account Management - Accounts, Users and Groups
   //'Campaign Name': '.form__input___1njKD.form__campaignManagement___1Aqxq >div Input[name="name"]',
   'Campaign Name': 'Input[name=\'name\']',
+  'Last Campaign Name': '.datagrid__rtTrGroup___2oDPX:last-child .datagrid__rtTd___-YAv-:nth-child(3) .linkedSpan__spanLink___3khFu',
+  //hey
+
   'Edit Campaign Name': '.form__input___1njKD >div Input[name="name"]',
   'Parent Account Name': '.form__input___1njKD .Select-input > input',
   'Group Account Name': '.form__col___3CJjJ .Select-input > input',
@@ -423,11 +434,21 @@ const setElementLookupTable = {
   // Creative
 
   'Name Field': '.form__flexRow___3cThm:nth-child(1) >div Input[name="name"]',
+  'Creative Name Label' : '.style__body___1wRq0 .style__formFieldRow___1PJAh label',
+  'Creative Name Field' : '.style__body___1wRq0 .style__formFieldRow___1PJAh:nth-child(1) >div Input[name="name"]',
+  'Creative Video Type' : '.style__body___1wRq0 .Select-control .Select-multi-value-wrapper .Select-placeholder',
   'Video URL': '.form__flexRow___3cThm:nth-child(2) >div Input[name="video.videoURL"]',
   'Vast URL':'.form__flexRow___3cThm:nth-child(2) >div Input[name="video.vastTagUrl"]',
+  'Creative Vast URL' : '.style__body___1wRq0 .style__formFieldRow___1PJAh:nth-child(2) >div Input[value="VAST_TAG_URL',
   'Vast XML':'.form__flexRow___3cThm:nth-child(2) >div textarea[name="video.vastTagXml"]',
+  'Creative vast XML' : '.style__body___1wRq0 .style__formFieldRow___1PJAh:nth-child(2) >div Input[value="VAST_TAG_XML',
   'Video Type Field-Label' :'.form__flexRow___3cThm:nth-child(2) .style__subLabel___24lqe',
-
+  'Creative Vast URL Field' : '.style__body___1wRq0 .style__formFieldRow___1PJAh:nth-child(3) >div Input[name="video.vastTagUrl"]',
+  //'Create a Creative':'.Select-control .Select-multi-value-wrapper .Select-option[aria-activedescendant$="--option-0"]',
+ 'Create a Creative' : '.Select-menu-outer .Select-option[id$="--option-0"]',
+  'Select combobox' : '.Select-control .Select-multi-value-wrapper .Select-placeholder',
+  'Creative Cancel Button' : '.style__actionBar___1LqFJ .style__actionButtonContainer___2_KqP .style__cancelButton___1qlOj',
+  'Creative Navigate Back' : '.bar__btn___wQ8WA .bar__navigateBack___DTtFv',
 
   // delivery
   'Enter the Number Field': '.form__input___1njKD',

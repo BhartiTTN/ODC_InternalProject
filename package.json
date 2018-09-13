@@ -7,7 +7,7 @@
     "gherkin-lint": "./node_modules/.bin/gherkin-lint",
     "lint": "node_modules/.bin/eslint ./",
     "lintFix": "node_modules/.bin/eslint ./ --fix",
-    "example": "npm start -- --features=ODC-45_LoginValidation.feature --tags=@Accept",
+    "example": "npm start -- --features=ODC-858_Accountswitch.feature --tags=@Accept",
     "start": "mkdir -p reports/allure-results && find reports/allure-results -type f -maxdepth 1 -delete && ./node_modules/.bin/wdio configuration/wdio.conf.js",
     "jenkinsConfig": "mkdir -p reports/allure-results && find reports/allure-results -type f -maxdepth 1 -delete && ./node_modules/.bin/wdio configuration/wdio.jenkins.conf.js",
     "multiremoteConfig": "mkdir -p reports/allure-results && find reports/allure-results -type f -maxdepth 1 -delete && ./node_modules/.bin/wdio configuration/wdio.multiremote.conf.js",

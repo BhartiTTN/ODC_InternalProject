@@ -20,6 +20,7 @@ import isVisible from '../../support/check/isVisible';
 import login from '../../support/action/login';
 import openWebsite from '../../support/action/openWebsite';
 import resizeScreenSize from '../../support/action/resizeScreenSize';
+import navigateTillLastRow from '../../support/action/navigateTillLastRow';
 
 
 module.exports = function given() {
@@ -80,7 +81,7 @@ module.exports = function given() {
   );
 
   this.Given(
-    /^the (element|inputfield) "([^"]*)?"( not)* contains any text$/,
+    /^the (element|inputfield) "([^"]*)?"( not)* cI expect that the css attributeontains any text$/,
     checkContainsAnyText
   );
 
@@ -137,5 +138,10 @@ module.exports = function given() {
   this.Given(
     /^I have "([^"]+)" copied to the clipboard$/,
     copyToClipboard
+  );
+
+  this.Given(
+    /^I click on the element "([^"]*)?" having( css)* attribute disabled until will get CSS value "([^"]+)"$/,
+    navigateTillLastRow
   );
 };

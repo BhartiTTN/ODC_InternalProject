@@ -18,9 +18,9 @@ module.exports = (type, selectorKey, variableName, done) => {
 
   const command = (type !== 'inputfield') ? 'getText' : 'getValue';
 
-  browser.waitForVisible(selector);
+ // browser.waitForVisible(selector);
   const value = browser[command](selector);
-
+  console.log("Value is: " + value);
   const reg = findRegEXInTable(selectorKey);
 
   if (reg) {

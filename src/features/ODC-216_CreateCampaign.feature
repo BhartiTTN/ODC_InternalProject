@@ -231,3 +231,13 @@ Feature: ODC-216 Create Campaign
     Examples:
       | 50characters Campaign Name     |
       | SameCampaignNamofdelCampaignNa |
+
+
+    #Bharti
+  @Accept
+  Scenario: To get the Last Row data of Campaigns by navigating.
+    Given I click on the element "Right Arrow of Campaign Paging" having attribute disabled until will get CSS value "true"
+    And I store the value from element "Last Campaign Name" as "LastCampaignNameValue"
+    Then I am displaying the Last fetched Campaign name
+
+

@@ -6,7 +6,7 @@ Background: I am on the account management page
 # Account
 
 # Verify AccountList (Table) Column headers and data ; Select checkbox for First row
-
+@Accept
   Scenario:
     And I expect that table element "List Element" contains element with text "Status"
     And I expect that table element "List Element" contains element with text "Account Name"

@@ -41,6 +41,8 @@ import checkSortOrder from '../../support/check/checkSortOrder';
 import checkGridCount from '../../support/check/checkGridCount';
 import checkNumberComma from '../../support/check/checkNumberComma';
 import checkCTACharCount from '../../support/VGSpecificStepMethods/Generic/check/checkCTACharCount';
+import displayLastFetchedCampaignName from '../../support/check/displayLastFetchedCampaignName';
+
 
 module.exports = function then() {
   this.Then(
@@ -270,6 +272,10 @@ module.exports = function then() {
   this.Then(
     /^I expect that the csv file named (with stored variable )?"([^"]+)" was downloaded$/,
     checkFileDownloaded
+  );
+  this.Then(
+    /^I am displaying the Last fetched Campaign name$/,
+    displayLastFetchedCampaignName
   );
 
 };

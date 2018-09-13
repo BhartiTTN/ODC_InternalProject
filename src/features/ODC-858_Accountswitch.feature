@@ -69,3 +69,47 @@ Feature: ODC-858 Verify the campaign or creative is not existing in when the Acc
 
 
 
+##Bharti
+  @Accept
+  Scenario: To Add Creative in the First Existing campaign
+
+  ##Positive flow to check whether a Creative will get created.
+    When I select default account
+    And I click on "Campaign Name First Link"
+    And I pause for 8000ms
+    And I click on "Select combobox"
+    And I click on "Create a Creative"
+
+    And I set "CreativeNameBhar" to the inputfield appended with current Date_Time "Creative Name Field"
+    And I store the value from inputfield "Creative Name Field" as "New Creative Name"
+    And I click on "Creative Video Type"
+    And I click on "Video Type VAST_URL"
+    And I set "https://qa2.viralgains.com/vg/s/8a8081a65c9da3f8015c9da654300041" to "Creative Vast URL Field"
+    And I click on "Save"
+    And I pause for 1500ms for the grid to display Creative Group success message
+
+  ##Check whether Save field will get disable on not filling mandatory fields
+    And I click on "Creative Cancel Button"
+
+   ## When I click on "Creative Tab Row"
+    Then I expect that element "Existing Creative Name" does exist
+    When I click on "Creative Select Checkbox"
+    And I click on "Existing Creative Name"
+    And I clear the inputfield "Creative Name Field"
+    And I click on "Creative Name Label"
+    Then I expect that element "Field Error Message" contains the text "Required"
+    And I expect that element "Save" is not enabled
+    And I set "CreativeNameBhar" to the inputfield appended with current Date_Time "Creative Name Field"
+    And I clear the inputfield "Creative Vast URL Field"
+    And I click on "Creative Name Label"
+    Then I expect that element "Field Error Message" contains the text "Required"
+    And I expect that element "Save" is not enabled
+
+    When I set "https://qa2.viralgains.com/vg/s/8a8081a65c9da3f8015c9da654300041" to "Creative Vast URL Field"
+    Then I expect that element "Save" is enabled
+
+     And I click on "Save"
+    And I pause for 1500ms for the grid to display Creative Group success message
+    And I click on "Creative Navigate Back"
+    Then I expect to be on the "ODC-Campaign_Dashboard" page
+
